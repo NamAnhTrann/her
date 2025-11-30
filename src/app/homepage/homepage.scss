@@ -280,3 +280,23 @@ p > strong {
   }
 }
 
+.option-btn {
+  @apply w-full text-center px-6 py-3 font-semibold rounded-xl text-white
+    bg-gradient-to-r from-sky-400 to-sky-600
+    shadow-md transition-all duration-300 ease-out;
+}
+
+/* Hover */
+.option-btn:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 12px 25px rgba(56, 189, 248, 0.4); /* sky blue glow */
+  filter: brightness(1.08);
+}
+
+/* Click (active) */
+.option-btn:active {
+  transform: translateY(0px) scale(0.97);
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.3);
+  filter: brightness(0.95);
+}
+

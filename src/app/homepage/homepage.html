@@ -3,12 +3,15 @@
   id="1"
   class="h-screen w-full flex flex-col items-center justify-center bg-white"
 >
-  <swiper-container
-    slides-per-view="1"
-    loop="true"
-    speed="600"
-    class="w-[90%] h-[70%] rounded-xl overflow-hidden"
-  >
+<swiper-container
+  slides-per-view="1"
+  loop="true"
+  speed="800"
+  navigation="true"
+  class="w-[90%] h-screen flex items-center justify-center 
+         [--swiper-navigation-size:0px] 
+         md:[--swiper-navigation-size:22px]"
+>
     <!-- Slide 1 -->
     <swiper-slide class="flex flex-col items-center justify-center gap-4">
       <p class="text-4xl font-bold text-black">Hi</p>
@@ -86,7 +89,8 @@
     <swiper-slide class="flex flex-col items-center justify-center gap-4">
       <p class="text-4xl font-bold text-black text-center py-3">
         this is going to be my first real attempt of getting you back. I'm not
-        very good at making stuff visually beautiful, but I'll try my best
+        very good at making stuff visually beautiful (i'm a backend guy), but
+        I'll try my best
         <br />ദ്ദി◝ ⩊ ◜.ᐟ
       </p>
 
@@ -97,30 +101,19 @@
       />
     </swiper-slide>
 
-    <swiper-slide class="flex flex-col items-center justify-center gap-4">
-      <!-- Text or image above if needed -->
-      <p>The Options</p>
-      <div class="flex flex-col items-center gap-3 mt-4">
-        <a
-          href="#2"
-          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
-        >
-          My Reasons
-        </a>
+    <swiper-slide class="flex flex-col items-center justify-center gap-6 px-6">
+      <p class="text-2xl md:text-3xl font-semibold text-gray-800">
+        The Options
+      </p>
 
-        <a
-          href="#3"
-          class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
-        >
-          My Apologies
-        </a>
+      <div class="flex flex-col items-center gap-4 w-full max-w-xs">
+        <!-- Button -->
+          <a href="#1" class="option-btn"> Main Hobby </a>
+        <a href="#2" class="option-btn"> My Reason </a>
 
-        <a
-          href="#4"
-          class="text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition"
-        >
-          My Lies
-        </a>
+        <a href="#3" class="option-btn">My Apologies</a>
+
+        <a href="#4" class="option-btn"> My Lies </a>
       </div>
     </swiper-slide>
   </swiper-container>
@@ -131,13 +124,16 @@
   id="2"
   class="w-full min-h-screen bg-white flex items-center justify-center"
 >
-  <swiper-container
-    slides-per-view="1"
-    loop="false"
-    speed="800"
-    pagination="true"
-    class="w-[90%] h-full flex items-center justify-center"
-  >
+<swiper-container
+  slides-per-view="1"
+  loop="true"
+  speed="800"
+  navigation="true"
+  class="w-[90%] h-screen flex items-center justify-center 
+         [--swiper-navigation-size:0px] 
+         md:[--swiper-navigation-size:22px]"
+>
+
     <!-- SLIDE 1 -->
     <swiper-slide
       class="h-screen flex flex-col items-center justify-center px-6 py-10"
@@ -168,7 +164,7 @@
 
     <!-- SLIDE 2 -->
     <swiper-slide
-      class="flex flex-col items-center justify-center px-6 py-10 mt-24"
+      class="flex flex-col items-center justify-center px-6 py-10 "
     >
       <div class="grid w-full max-w-7xl grid-cols-1 sm:grid-cols-3 gap-6">
         <!-- CARD 1 -->
@@ -498,6 +494,21 @@
         </div>
       </div>
     </swiper-slide>
+
+    <swiper-slide class="flex flex-col items-center justify-center gap-6 px-6">
+      <p class="text-2xl md:text-3xl font-semibold text-gray-800">
+        The Options
+      </p>
+
+      <div class="flex flex-col items-center gap-4 w-full max-w-xs">
+        <!-- Button -->
+        <a href="#1" class="option-btn"> Back To Main </a>
+
+        <a href="#3" class="option-btn">My Apologies </a>
+
+        <a href="#4" class="option-btn"> My Lies </a>
+      </div>
+    </swiper-slide>
   </swiper-container>
 </section>
 
@@ -506,13 +517,15 @@
   id="3"
   class="h-screen w-full flex flex-col items-center justify-center bg-white"
 >
-  <swiper-container
-    slides-per-view="1"
-    loop="true"
-    speed="600"
-    fade-effect-cross-fade="true"
-    class="w-full h-full"
-  >
+<swiper-container
+  slides-per-view="1"
+  loop="true"
+  speed="800"
+  navigation="true"
+  class="w-[90%] h-screen flex items-center justify-center 
+         [--swiper-navigation-size:0px] 
+         md:[--swiper-navigation-size:22px]"
+>
     <!-- Slide 1 -->
     <swiper-slide
       class="h-screen flex flex-col items-center justify-center px-6 py-10"
@@ -608,21 +621,6 @@
       >
         Even though, I told myself that I was only trying to make you happy,
         <br />
-        I set out to instead, made you sad.
-      </p>
-    </swiper-slide>
-
-    <swiper-slide class="flex flex-col items-center justify-center px-6">
-      <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 text-center">
-        The Extra Burdens
-      </h2>
-
-      <p
-        class="text-gray-600 mt-2 text-center max-w-xl reveal-text cursor-pointer"
-        onclick="this.classList.add('revealed')"
-      >
-        Even though, I told myself that I was only trying to make you happy,
-        <br />
         I set out to instead, made you sad. I was selfish, only cared about what
         I had to say. <br />
         <br />
@@ -670,6 +668,23 @@
         Words are cheap, so may action speaks for itself ᕙ( •̀ ᗜ •́ )ᕗ
       </p>
     </swiper-slide>
+
+    <swiper-slide class="flex flex-col items-center justify-center gap-6 px-6">
+      <p class="text-2xl md:text-3xl font-semibold text-gray-800">
+        The Options
+      </p>
+
+      <div class="flex flex-col items-center gap-4 w-full max-w-xs">
+        <!-- Button -->
+        <a href="#1" class="option-btn"> Back To Main </a>
+
+        <a href="#2" class="option-btn"
+          >My Reasons (you already read this, but you re-read)</a
+        >
+
+        <a href="#4" class="option-btn"> My Lies (This Next) </a>
+      </div>
+    </swiper-slide>
   </swiper-container>
 </section>
 
@@ -678,12 +693,15 @@
   id="4"
   class="h-screen w-full flex flex-col items-center justify-center bg-white"
 >
-  <swiper-container
-    slides-per-view="1"
-    loop="true"
-    speed="500"
-    class="w-full h-full"
-  >
+<swiper-container
+  slides-per-view="1"
+  loop="true"
+  speed="800"
+  navigation="true"
+  class="w-[90%] h-screen flex items-center justify-center 
+         [--swiper-navigation-size:0px] 
+         md:[--swiper-navigation-size:22px]"
+>
     <!-- Slide 1 -->
     <swiper-slide
       class="h-screen flex flex-col items-center justify-center px-6 py-10"
@@ -759,7 +777,7 @@
       <h2 class="mb-4 text-3xl md:text-3xl font-semibold text-gray-900">
         <span class="text-4xl"
           >So let me "update" my words from the birthday gift</span
-        > 
+        >
       </h2>
 
       <p
@@ -774,13 +792,14 @@
         <span class="text-pink-400 font-semibold">Sakura</span> brings out your
         light.<br /><br />
 
-        But <span class="text-[#D4C0A8] font-semibold">Beige</span> sits closest to your truth, calm, steady, and quietly
-        beautiful in a way the other colours only hint at ---
+        But <span class="text-[#D4C0A8] font-semibold">Beige</span> sits closest
+        to your truth, calm, steady, and quietly beautiful in a way the other
+        colours only hint at ---
         <span class="text-[#D4C0A8] font-semibold">Beige</span> feels like you.
       </p>
     </swiper-slide>
 
-        <swiper-slide
+    <swiper-slide
       class="h-screen flex flex-col items-center justify-center px-6 py-10"
     >
       <div class="max-w-2xl text-center animate-fadeUp">
@@ -791,14 +810,31 @@
           <span
             class="block text-gray-400 text-lg md:text-xl mb-2 tracking-wide"
           >
-            <strong>Andddd that's all !  </strong> <br>
-          If you've made it this far, thank you for reading through everything. <br>
-            Even if you don't want to see me again, I do really hope you don't ever blame yourself for anything. <br>
-            Goodbye For Now, and Best of Luck With Everything! And Know That, I'll Always be Here ദ്ദി(ᵔᗜᵔ) <br> <br> you know how to reach out to me ( ˶ˆᗜˆ˵ )
+            <strong>Andddd that's all ! </strong> <br />
+            If you've made it this far, thank you for reading through
+            everything. <br />
+            Even if you don't want to see me again, I do really hope you don't
+            ever blame yourself for anything. <br />
+            Goodbye For Now, and Best of Luck With Everything! And Know That,
+            I'll Always be Here ദ്ദി(ᵔᗜᵔ) <br />
+            <br />
+            you know how to reach out to me ( ˶ˆᗜˆ˵ )
           </span>
-
-        
         </h1>
+      </div>
+    </swiper-slide>
+    <swiper-slide class="flex flex-col items-center justify-center gap-6 px-6">
+      <p class="text-2xl md:text-3xl font-semibold text-gray-800">
+        The Options
+      </p>
+
+      <div class="flex flex-col items-center gap-4 w-full max-w-xs">
+        <!-- Button -->
+        <a href="#1" class="option-btn"> Back To Main </a>
+
+        <a href="#2" class="option-btn"> My Reasons </a>
+
+        <a href="#3" class="option-btn"> My Apologies </a>
       </div>
     </swiper-slide>
   </swiper-container>

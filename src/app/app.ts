@@ -11,6 +11,10 @@ import 'preline/preline';
 })
 export class App {
   protected readonly title = signal('her');
+  isMenuOpen = false;
+
+
+
   currentSong = signal('');
   isEasterEgg = signal(false);
 
@@ -27,6 +31,24 @@ export class App {
     'songs/and still, the sky waited.mp3',
     
   ];
+
+  toggleMenu() {
+  this.isMenuOpen = !this.isMenuOpen;
+}
+
+closeMenu() {
+  this.isMenuOpen = false;
+}
+@HostListener('document:click', ['$event'])
+onDocumentClick(event: MouseEvent) {
+  const menu = document.getElementById('options-menu');
+  const button = document.getElementById('options-menu-button');
+
+  if (!menu?.contains(event.target as Node) && !button?.contains(event.target as Node)) {
+    this.isMenuOpen = false;
+  }
+}
+
 
   showPlayHint = signal(false);
   private firstClickListenerAdded = false;

@@ -1,12 +1,56 @@
 <button 
   (click)="toggleMusic()" 
-  class="fixed top-4 left-8 z-[9999] 
+  class="fixed top-4 right-8 z-[9999] 
          px-4 py-2 rounded-lg 
          bg-white/20 text-sky-300
          backdrop-blur-md 
-         hover:bg-white/30 transition mt-4"
+         hover:bg-white/30 transition mt-4
+         hidden md:block"
 >
   {{ isMusicOn() ? '🔊 Music On' : '🔇 Music Off' }}
 </button>
+
+<!-- OPTIONS MENU (desktop only) -->
+<div class="fixed top-4 left-32 z-[9999] hidden md:block">
+
+  <!-- Menu trigger -->
+  <button 
+    id="options-menu-button"
+    (click)="toggleMenu()"
+    class="px-4 py-2 rounded-lg 
+           bg-white/20 text-sky-300
+           backdrop-blur-md 
+           hover:bg-white/30 transition"
+  >
+    Menu
+  </button>
+
+  <!-- Dropdown (opens and stays open on click) -->
+  <div
+    id="options-menu"
+    [class.hidden]="!isMenuOpen"
+    class="absolute mt-2 w-44
+           bg-white/30 backdrop-blur-xl
+           rounded-xl shadow-lg p-2 transition"
+  >
+    <a href="#1" class="block option-btn px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+      Main Hobby
+    </a>
+
+    <a href="#2" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+      My Reason
+    </a>
+
+    <a href="#3" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+      My Apologies
+    </a>
+
+    <a href="#4" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+      My Lies
+    </a>
+  </div>
+</div>
+
+
 <app-header></app-header>
 <router-outlet></router-outlet>
