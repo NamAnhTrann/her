@@ -25,30 +25,32 @@
     Menu
   </button>
 
-  <!-- Dropdown (opens and stays open on click) -->
-  <div
-    id="options-menu"
-    [class.hidden]="!isMenuOpen"
-    class="absolute mt-2 w-44
-           bg-white/30 backdrop-blur-xl
-           rounded-xl shadow-lg p-2 transition"
-  >
-    <a href="#1" class="block option-btn px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
-      Main Hobby
-    </a>
+<!-- Dropdown (animated) -->
+<div
+  id="options-menu"
+  [class.hidden]="!isMenuOpen"
+  class="absolute mt-2 w-44 
+         bg-white/30 backdrop-blur-xl
+         rounded-xl shadow-lg p-2
+         origin-top right-0
+         transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+         dropdown-animate"
+>
+  <a href="#1" class="block option-btn px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+    Main Hobby
+  </a>
+  <a href="#2" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+    My Reason
+  </a>
+  <a href="#3" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+    My Apologies
+  </a>
+  <a href="#4" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
+    My Lies
+  </a>
+</div>
 
-    <a href="#2" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
-      My Reason
-    </a>
 
-    <a href="#3" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
-      My Apologies
-    </a>
-
-    <a href="#4" class="block option-btn mt-2 px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
-      My Lies
-    </a>
-  </div>
 </div>
 
 
