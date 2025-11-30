@@ -15,11 +15,18 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
-/* TEXT REVEAL CONTROL */
 .reason-text {
   transition: all 0.5s ease;
-  font-size: x-large;
+  font-size: 0.75rem;      /* mobile text */
+  line-height: 1.2;        /* tighter spacing for mobile */
 }
+
+@media (min-width: 640px) { /* sm and above */
+  .reason-text {
+    font-size: x-large;     /* desktop */
+  }
+}
+
 
 .reason-card.revealed .reason-text {
   opacity: 1 !important;
