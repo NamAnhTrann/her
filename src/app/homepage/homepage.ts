@@ -1,4 +1,5 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, AfterViewInit } from '@angular/core';
+import { RouterLinkActive } from '@angular/router';
 import AOS from 'aos';
 import TypeIt from 'typeit';
 
@@ -6,6 +7,7 @@ import TypeIt from 'typeit';
   selector: 'app-homepage',
   templateUrl: './homepage.html',
   styleUrl: './homepage.scss',
+  imports: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class Homepage implements AfterViewInit {
