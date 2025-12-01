@@ -98,3 +98,60 @@ body.swal2-shown app-root {
   backdrop-filter: none !important;
 }
 
+/* ------------------------------------- */
+/* Realistic Marker Highlight - 3 Colors */
+/* ------------------------------------- */
+
+/* Base */
+.realistic-marker-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+/* Card 1 - Pink */
+.highlight-pink::before {
+  content: "";
+  position: absolute;
+  left: -0.25em;
+  top: 0.1em;
+  width: calc(100% + 0.5em);
+  height: 1em;
+  background-color: #ff6db7;
+  z-index: -1;
+  filter: url(#marker-shape);
+  padding: 0 0.25em;
+}
+
+/* Card 2 - Blue */
+.highlight-blue::before {
+  content: "";
+  position: absolute;
+  left: -0.25em;
+  top: 0.1em;
+  width: calc(100% + 0.5em);
+  height: 1em;
+  background-color: #7dc9ff;
+  z-index: -1;
+  filter: url(#marker-shape);
+  padding: 0 0.25em;
+}
+
+/* Card 3 - Purple */
+.highlight-purple::before {
+  content: "";
+  position: absolute;
+  left: -0.25em;
+  top: 0.1em;
+  width: calc(100% + 0.5em);
+  height: 1em;
+  background-color: #C7B299;
+  z-index: -1;
+  filter: url(#marker-shape);
+  padding: 0 0.25em;
+}
+
+/* Reveal animation compatibility */
+.reason-card.revealed .realistic-marker-highlight::before {
+  animation: card-text-before 1.6s cubic-bezier(.77,0,.18,1) forwards;
+}
