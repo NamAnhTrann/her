@@ -65,10 +65,7 @@ export class App {
     });
 
     // 🔹 Add one-time listener for first user click
-    if (!this.firstClickListenerAdded) {
-      document.addEventListener('click', this.handleFirstClick, { once: true });
-      this.firstClickListenerAdded = true;
-    }
+
   }
 
   private handleFirstClick = () => {
@@ -129,43 +126,49 @@ export class App {
     }
   }
 
-  showWelcomePopup() {
-    Swal.fire({
-      title: 'This Might Be Better On Laptop',
-      html: `
-    <p style="font-size: 1rem; line-height: 1.6;">
-      Tried to optimise this on mobile but I am bad at frontend, UI stuff, sorry •ᴗ•
-    </p>
-  `,
-      width: '32rem',
-      padding: '1.5rem',
-      background: 'rgba(0, 0, 0, 1)',
-      color: '#ffffffff',
-
-      cancelButtonColor: '#444141ff',
-
-      confirmButtonText: 'Next',
-      confirmButtonColor: '#444141ff',
-    }).then((res) => {
-      if (res.isConfirmed) {
-        this.showNextPopup();
-      }
-    });
-  }
-  showNextPopup() {
-    Swal.fire({
-      title: 'If you see redacted text, tab on em .ᐟ.ᐟ',
-      html: `
+showWelcomePopup() {
+  Swal.fire({
+    title: 'This Might Be Better On Laptop',
+    html: `
       <p style="font-size: 1rem; line-height: 1.6;">
-        Have Fun ✧˖°.
+        Tried to optimise this on mobile but I am bad at frontend, UI stuff, sorry •ᴗ•
       </p>
     `,
-      width: '32rem',
-      padding: '1.5rem',
-      background: 'rgba(0, 0, 0, 1)',
-      color: '#ffffffff',
-      confirmButtonText: 'Close',
-      confirmButtonColor: '#444141ff',
-    });
-  }
+    width: '32rem',
+    padding: '1.5rem',
+    background: 'rgba(0, 0, 0, 1)',
+    color: '#ffffffff',
+    cancelButtonColor: '#444141ff',
+    confirmButtonText: 'Next',
+    confirmButtonColor: '#444141ff'
+  }).then(res => {
+    if (res.isConfirmed) {
+      this.showNextPopup();
+    }
+  });
+}
+
+showNextPopup() {
+  Swal.fire({
+    title: 'If you see redacted text, tap on them',
+    html: `
+      <p style="font-size: 1rem; line-height: 1.6;">
+        Have Fun.
+      </p>
+    `,
+    width: '32rem',
+    padding: '1.5rem',
+    background: 'rgba(0, 0, 0, 1)',
+    color: '#ffffffff',
+    confirmButtonText: 'Close',
+    confirmButtonColor: '#444141ff'
+  }).then(() => {
+
+    // Unlock audio ONLY now
+    document.addEventListener('click', this.handleFirstClick, { once: true });
+    this.firstClickListenerAdded = true;
+
+  });
+}
+
 }
