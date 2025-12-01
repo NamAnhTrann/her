@@ -1,9 +1,5 @@
-
 <!-- Section 1 -->
-<section
-  id="1"
-  class="  w-full flex flex-col items-center justify-center"
->
+<section id="1" class="w-full flex flex-col items-center justify-center">
   <swiper-container
     slides-per-view="1"
     loop="true"
@@ -14,7 +10,7 @@
     <!-- Slide 1 -->
     <swiper-slide class="flex flex-col items-center justify-center gap-4">
       <p class="text-4xl text-center font-bold text-black">
-        Hi <br>(Best if you're on computer)
+        Hi <br />(Best if you're on computer)
       </p>
 
       <img
@@ -160,332 +156,344 @@
     </swiper-slide>
 
     <!-- SLIDE 2 -->
-<swiper-slide class="flex flex-col items-center justify-center px-6 py-10">
+    <swiper-slide class="flex flex-col items-center justify-center px-6 py-10">
+      <!-- DESKTOP GRID (unchanged) -->
+      <div class="hidden sm:grid w-full max-w-7xl grid-cols-3 gap-6">
+        <!-- CARD 1 -->
+        <div
+          class="reason-card relative flex items-center justify-center text-center w-full max-w-none h-[220px] p-4 text-[1rem] sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+          onclick="this.classList.add('revealed')"
+        >
+          <p
+            class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]"
+          >
+            Click
+          </p>
 
-  <!-- DESKTOP GRID (unchanged) -->
-  <div class="hidden sm:grid w-full max-w-7xl grid-cols-3 gap-6">
-
-    <!-- CARD 1 -->
-    <div
-      class="reason-card relative flex items-center justify-center text-center 
-             w-full max-w-none h-[220px] p-4 text-[1rem] 
-             sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%]
-             bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-      onclick="this.classList.add('revealed')"
-    >
-      <p class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]">
-        Click
-      </p>
-
-      <div class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-4 leading-relaxed text-center">
-        <span class="reveal-text block text-[1.3rem] sm:text-[1.6rem] font-semibold text-gray-900">
-          You Were Always There for Me
-        </span>
-
-        <span class="reveal-text block text-[1.05rem] sm:text-[1.25rem] text-gray-700 space-y-4 max-w-[90%] sm:max-w-[80%]">
-          <span class="block">
-            I never expected someone to stay and actually listen, especially when it was
-            <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">the same problem</span>
-            again and again.
-          </span>
-
-          <span class="block">
-            You didn’t have to, but you did. And it meant
-            <span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold">
-              more than you realise
-            </span>.
-          </span>
-        </span>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div
-      class="reason-card relative flex items-center justify-center text-center 
-             w-full max-w-none h-[220px] p-4 text-[1rem] 
-             sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%]
-             bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-      onclick="this.classList.add('revealed')"
-    >
-      <p class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]">Click</p>
-
-      <div class="reason-text opacity-0 translate-y-3 flex flex-col items-center text-center gap-2 sm:text-[1rem] sm:leading-relaxed">
-
-        <div class="hidden sm:block space-y-4">
-          <span class="reveal-text text-xl font-semibold">I miss you.</span>
-
-          <span class="reveal-text block text-[1.20rem] leading-relaxed">
-            I miss
-            <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">
-              watching you work
+          <div
+            class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-4 leading-relaxed text-center"
+          >
+            <span
+              class="reveal-text block text-[1.3rem] sm:text-[1.6rem] font-semibold text-gray-900"
+            >
+              You Were Always There for Me
             </span>
-            in the library.
-            <br><br>
 
-            I miss
-            <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">
-              seeing you on Friday at badminton
-            </span>.
-            <br><br>
+            <span
+              class="reveal-text block text-[1.05rem] sm:text-[1.25rem] text-gray-700 space-y-4 max-w-[90%] sm:max-w-[80%]"
+            >
+              <span class="block">
+                I never expected someone to stay and actually listen, especially
+                when it was
+                <span
+                  class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                  >the same problem</span
+                >
+                again and again.
+              </span>
 
-            I miss
-            <span class="px-2 py-0.5 rounded-md bg-rose-100 text-rose-600 font-semibold">
-              waiting for you
+              <span class="block">
+                You didn’t have to, but you did. And it meant
+                <span
+                  class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                >
+                  more than you realise </span
+                >.
+              </span>
             </span>
-            at the shuttle bus.
-            <br><br>
-
-            I miss all your
-            <span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold">
-              song recommendations
-            </span>.
-            <br>(ᵕ—ᴗ—)
-            <br><br>
-
-            <span class="block text-gray-500 italic mt-2">
-              There’s more I could say, but the card is out of space...
-            </span>
-          </span>
+          </div>
         </div>
 
-      </div>
-    </div>
+        <!-- CARD 2 -->
+        <div
+          class="reason-card relative flex items-center justify-center text-center w-full max-w-none h-[220px] p-4 text-[1rem] sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+          onclick="this.classList.add('revealed')"
+        >
+          <p
+            class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]"
+          >
+            Click
+          </p>
 
-    <!-- CARD 3 -->
-    <div
-      class="reason-card relative flex items-center justify-center text-center 
-             w-full max-w-none h-[220px] p-3 
-             sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%]
-             bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-      onclick="this.classList.add('revealed')"
-    >
+          <div
+            class="reason-text opacity-0 translate-y-3 flex flex-col items-center text-center gap-2 sm:text-[1rem] sm:leading-relaxed"
+          >
+            <div class="hidden sm:block space-y-4">
+              <span class="reveal-text text-xl font-semibold">I miss you.</span>
 
-      <p class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]">
-        Click
-      </p>
+              <span class="reveal-text block text-[1.20rem] leading-relaxed">
+                I miss
+                <span
+                  class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                >
+                  watching you work
+                </span>
+                in the library.
+                <br /><br />
 
-      <div class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-3 text-center sm:text-[1rem] sm:leading-relaxed">
+                I miss
+                <span
+                  class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                >
+                  seeing you on Friday at badminton </span
+                >. <br /><br />
 
-        <span class="reveal-text block text-[1rem] sm:text-[1.7rem] font-semibold text-gray-900">
-          My Motivation
-        </span>
+                I miss
+                <span
+                  class="px-2 py-0.5 rounded-md bg-rose-100 text-rose-600 font-semibold"
+                >
+                  waiting for you
+                </span>
+                at the shuttle bus.
+                <br /><br />
 
-        <span class="reveal-text block text-[1.25rem] text-gray-700 space-y-4 max-w-[80%]">
+                I miss all your
+                <span
+                  class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                >
+                  song recommendations </span
+                >. <br />(ᵕ—ᴗ—) <br /><br />
 
-          <span class="block">
-            I wanted you to feel happy, and without even realising,
-            <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">I started trying harder</span>
-            at everything.
-          </span>
-
-          <span class="block">
-            You made me want to be better, to work harder, to grow.
-          </span>
-
-          <span class="block">
-            Even if we’re just friends, I still only want to make you happy,
-            because
-            <span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold">
-              you deserve it
-            </span>
-          </span>
-
-        </span>
-      </div>
-    </div>
-
-  </div>
-
-<!-- MOBILE SWIPER (independent swipe) -->
-<div class="sm:hidden w-full">
-  <swiper-container
-    slides-per-view="1.1"
-    space-between="12"
-    nested="true"
-    touch-start-prevent-default="false"
-    touch-move-stop-propagation="true"
-    class="w-full"
-  >
-
-    <!-- CARD 1 MOBILE -->
-    <swiper-slide>
-    <div
-  class="reason-card relative h-[220px] p-3 text-[0.75rem]
-         bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-  onclick="this.classList.add('revealed')"
->
-
-        <p class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]">
-        Click
-      </p>
-
-      <div class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-4 leading-relaxed text-center">
-        <span class="reveal-text block text-[1.3rem] sm:text-[1.6rem] font-semibold text-gray-900">
-          You Were Always There for Me
-        </span>
-
-        <span class="reveal-text block text-[1.05rem] sm:text-[1.25rem] text-gray-700 space-y-4 max-w-[90%] sm:max-w-[80%]">
-          <span class="block">
-            I never expected someone to stay and actually listen, especially when it was
-            <span class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">the same problem</span>
-            again and again.
-          </span>
-
-          <span class="block">
-            You didn’t have to, but you did. And it meant
-            <span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold">
-              more than you realise
-            </span>.
-          </span>
-        </span>
+                <span class="block text-gray-500 italic mt-2">
+                  There’s more I could say, but the card is out of space...
+                </span>
+              </span>
+            </div>
+          </div>
         </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="reason-card relative flex items-center justify-center text-center w-full max-w-none h-[220px] p-3 sm:h-[70vh] sm:p-10 sm:text-[1.4rem] sm:max-w-[90%] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+          onclick="this.classList.add('revealed')"
+        >
+          <p
+            class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]"
+          >
+            Click
+          </p>
+
+          <div
+            class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-3 text-center sm:text-[1rem] sm:leading-relaxed"
+          >
+            <span
+              class="reveal-text block text-[1rem] sm:text-[1.7rem] font-semibold text-gray-900"
+            >
+              My Motivation
+            </span>
+
+            <span
+              class="reveal-text block text-[1.25rem] text-gray-700 space-y-4 max-w-[80%]"
+            >
+              <span class="block">
+                I wanted you to feel happy, and without even realising,
+                <span
+                  class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                  >I started trying harder</span
+                >
+                at everything.
+              </span>
+
+              <span class="block">
+                You made me want to be better, to work harder, to grow.
+              </span>
+
+              <span class="block">
+                Even if we’re just friends, I still only want to make you happy,
+                because
+                <span
+                  class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                >
+                  you deserve it
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE SWIPER (independent swipe) -->
+      <div class="sm:hidden w-full">
+        <swiper-container
+          slides-per-view="1.1"
+          space-between="12"
+          nested="true"
+          touch-start-prevent-default="false"
+          touch-move-stop-propagation="true"
+          class="w-full"
+        >
+          <!-- CARD 1 MOBILE -->
+          <swiper-slide>
+            <div
+              class="reason-card relative h-[220px] p-3 text-[0.75rem] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+              onclick="this.classList.add('revealed')"
+            >
+              <p
+                class="click-hint opacity-70 text-gray-500 absolute left-1/2 -translate-x-1/2 sm:text-[1.1rem]"
+              >
+                Click
+              </p>
+
+              <div
+                class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-4 leading-relaxed text-center"
+              >
+                <span
+                  class="reveal-text block text-[1.3rem] sm:text-[1.6rem] font-semibold text-gray-900"
+                >
+                  You Were Always There for Me
+                </span>
+
+                <span
+                  class="reveal-text block text-[1.05rem] sm:text-[1.25rem] text-gray-700 space-y-4 max-w-[90%] sm:max-w-[80%]"
+                >
+                  <span class="block">
+                    I never expected someone to stay and actually listen,
+                    especially when it was
+                    <span
+                      class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                      >the same problem</span
+                    >
+                    again and again.
+                  </span>
+
+                  <span class="block">
+                    You didn’t have to, but you did. And it meant
+                    <span
+                      class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                    >
+                      more than you realise </span
+                    >.
+                  </span>
+                </span>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- CARD 2 MOBILE -->
+          <swiper-slide>
+            <div
+              class="reason-card relative h-[220px] p-3 text-[0.75rem] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+              onclick="this.classList.add('revealed')"
+            >
+              <!-- MOBILE WARNING -->
+              <span
+                class="block sm:hidden text-red-500 font-semibold text-[0.85rem] text-center"
+              >
+                Text too long to show :(
+              </span>
+
+              <!-- DESKTOP FULL CONTENT -->
+              <div
+                class="hidden sm:block reason-text opacity-0 translate-y-3 flex flex-col items-center text-center gap-2 text-[1rem] leading-relaxed"
+              >
+                <!-- TITLE -->
+                <span class="reveal-text text-xl font-semibold">
+                  I miss you.
+                </span>
+
+                <!-- BODY -->
+                <span class="reveal-text block text-[1.20rem] leading-relaxed">
+                  I miss
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                  >
+                    watching you work
+                  </span>
+                  in the library.
+                  <br /><br />
+
+                  I miss
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                  >
+                    seeing you on Friday at badminton </span
+                  >. <br /><br />
+
+                  I miss
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-rose-100 text-rose-600 font-semibold"
+                  >
+                    waiting for you
+                  </span>
+                  at the shuttle bus every Thursday.
+                  <br /><br />
+
+                  I miss all your
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                  >
+                    song recommendations </span
+                  >. <br />(ᵕ—ᴗ—) <br /><br />
+
+                  I miss
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-sky-100 text-sky-600 font-semibold"
+                  >
+                    looking out for you
+                  </span>
+                  every Wednesday at 12PM.
+                  <br />
+
+                  <span class="block text-gray-500 italic mt-2">
+                    There’s more I could say, but the card is out of space...
+                    <br />(ᵕ—ᴗ—)
+                  </span>
+                </span>
+              </div>
+            </div>
+          </swiper-slide>
+
+          <!-- CARD 3 MOBILE -->
+          <swiper-slide>
+            <div
+              class="reason-card relative h-[220px] p-3 text-[0.75rem] bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
+              onclick="this.classList.add('revealed')"
+            >
+              <div
+                class="reason-text opacity-0 translate-y-3 flex flex-col items-center gap-3 leading-snug text-center text-[0.75rem] sm:text-[1rem] sm:leading-relaxed"
+              >
+                <!-- TITLE -->
+                <span
+                  class="reveal-text block text-[1rem] sm:text-[1.7rem] font-semibold text-gray-900"
+                >
+                  My Motivation
+                </span>
+
+                <!-- BODY -->
+                <span
+                  class="reveal-text block text-[0.8rem] sm:text-[1.25rem] text-gray-700 space-y-3 max-w-[95%] sm:max-w-[80%]"
+                >
+                  <span class="block">
+                    I wanted you to feel happy, and without even realising,
+                    <span
+                      class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
+                    >
+                      I started trying harder
+                    </span>
+                    at everything.
+                  </span>
+
+                  <span class="block">
+                    You made me want to be better, to work harder, to grow.
+                    Because of you, I actually did.
+                  </span>
+
+                  <span class="block">
+                    Even if we’re just friends, I still only want to make you
+                    happy, because
+                    <span
+                      class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
+                    >
+                      you deserve it
+                    </span>
+                  </span>
+                </span>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper-container>
       </div>
     </swiper-slide>
-
-<!-- CARD 2 MOBILE -->
-<swiper-slide>
-  <div
-    class="reason-card relative h-[220px] p-3 text-[0.75rem]
-           bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-    onclick="this.classList.add('revealed')"
-  >
-
-    <!-- MOBILE WARNING -->
-    <span class="block sm:hidden text-red-500 font-semibold text-[0.85rem] text-center">
-      Text too long to show :(
-    </span>
-
-    <!-- DESKTOP FULL CONTENT -->
-    <div class="hidden sm:block reason-text opacity-0 translate-y-3 
-                flex flex-col items-center text-center gap-2
-                text-[1rem] leading-relaxed">
-
-      <!-- TITLE -->
-      <span class="reveal-text text-xl font-semibold">
-        I miss you.
-      </span>
-
-      <!-- BODY -->
-      <span class="reveal-text block text-[1.20rem] leading-relaxed">
-        I miss
-        <span
-          class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">
-          watching you work
-        </span>
-        in the library.
-        <br><br>
-
-        I miss
-        <span
-          class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold">
-          seeing you on Friday at badminton
-        </span>.
-        <br><br>
-
-        I miss
-        <span
-          class="px-2 py-0.5 rounded-md bg-rose-100 text-rose-600 font-semibold">
-          waiting for you
-        </span>
-        at the shuttle bus every Thursday.
-        <br><br>
-
-        I miss all your
-        <span
-          class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold">
-          song recommendations
-        </span>.
-        <br>(ᵕ—ᴗ—)
-        <br><br>
-
-        I miss
-        <span
-          class="px-2 py-0.5 rounded-md bg-sky-100 text-sky-600 font-semibold">
-          looking out for you
-        </span>
-        every Wednesday at 12PM.
-        <br>
-
-        <span class="block text-gray-500 italic mt-2">
-          There’s more I could say, but the card is out of space... <br>(ᵕ—ᴗ—)
-        </span>
-      </span>
-
-    </div>
-
-  </div>
-</swiper-slide>
-
-    <!-- CARD 3 MOBILE -->
-<swiper-slide>
-  <div
-    class="reason-card relative h-[220px] p-3 text-[0.75rem]
-           bg-white/80 backdrop-blur-xl border border-pink-100/70 rounded-3xl"
-    onclick="this.classList.add('revealed')"
-  >
-
-    <div
-      class="reason-text opacity-0 translate-y-3 
-             flex flex-col items-center gap-3 
-             leading-snug text-center 
-             text-[0.75rem]
-             sm:text-[1rem] sm:leading-relaxed"
-    >
-
-      <!-- TITLE -->
-      <span
-        class="reveal-text block 
-               text-[1rem] sm:text-[1.7rem] font-semibold text-gray-900"
-      >
-        My Motivation
-      </span>
-
-      <!-- BODY -->
-      <span
-        class="reveal-text block 
-               text-[0.8rem] sm:text-[1.25rem] 
-               text-gray-700 space-y-3 max-w-[95%] sm:max-w-[80%]"
-      >
-
-        <span class="block">
-          I wanted you to feel happy, and without even realising,
-          <span
-            class="px-2 py-0.5 rounded-md bg-pink-100 text-pink-600 font-semibold"
-          >
-            I started trying harder
-          </span>
-          at everything.
-        </span>
-
-        <span class="block">
-          You made me want to be better, to work harder, to grow. Because
-          of you, I actually did.
-        </span>
-
-        <span class="block">
-          Even if we’re just friends, I still only want to make you happy,
-          because
-          <span
-            class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-600 font-semibold"
-          >
-            you deserve it
-          </span>
-        </span>
-
-      </span>
-
-    </div>
-
-  </div>
-</swiper-slide>
-
-
-  </swiper-container>
-</div>
-
-
-</swiper-slide>
-
 
     <swiper-slide
       class="h-screen flex flex-col items-center justify-center px-6 py-10"
@@ -882,42 +890,67 @@
     </swiper-slide>
 
     <!-- Slide 3 -->
+<swiper-slide
+  class="relative flex flex-col items-center justify-center px-6 py-10 overflow-hidden"
+>
+  <!-- FALLING LEAVES -->
+  <div class="autumn-leaves pointer-events-none">
+    <span class="leaf leaf-1"></span>
+    <span class="leaf leaf-2"></span>
+    <span class="leaf leaf-3"></span>
+    <span class="leaf leaf-4"></span>
+  </div>
+
+  <!-- CONTENT WRAPPER -->
+  <div
+    class="bg-white/80 backdrop-blur-xl border border-[#E8DCCF] rounded-3xl p-6 md:p-10 max-w-2xl text-center autumn-card relative z-10"
+  >
+    <h2 class="text-3xl md:text-4xl font-semibold text-[#5A4632]">
+      <span class="text-4xl text-gray-500">
+        "Skyblue With a Hint of Sakura"
+      </span>
+    </h2>
+
+    <p
+      class="text-[#4A3A2A] mt-4 text-center leading-relaxed reveal-text cursor-pointer"
+      onclick="this.classList.add('revealed')"
+    >
+      That's what I said in the birthday gift. Well, I lied. Technically
+      not. Yes, skyblue and sakura fits you. But the colour that fits you
+      the most is
+      <span class="text-[#C7B299] font-bold">Beige</span>.
+
+      <br /><br />
+
+      The first time I saw you after mid-sem break… the night before, you
+      told me you would be on the Shuttle to Caulfield on Thursday at 2 PM.
+      My class ended at 2. I ran there as fast as I could.
+
+      <br /><br />
+
+      I still remember the scarf you wore that day.
+
+      <br /><br />
+
+      It stopped me. You looked incredible in that colour. It felt like you
+      were made for autumn.
+
+      <br /><br />
+
+      The scarf, the outfit, everything worked perfectly. I didn’t know what
+      to say. That whole trip… I kept looking at the scarf.
+    </p>
+  </div>
+</swiper-slide>
+
+
     <swiper-slide class="flex flex-col items-center justify-center px-6">
-      <h2 class="text-3xl md:text-3xl font-semibold text-gray-900">
-        <span class="text-4xl">"Skyblue with a hint of Sakura"</span>
-      </h2>
-      <p
-        class="text-gray-600 mt-2 text-center max-w-xl reveal-text cursor-pointer"
-        onclick="this.classList.add('revealed')"
-      >
-        That's what I said in the birthday gift. Well, I lied. Well technically
-        not. Yes, skyblue and sakura fits you. But the colour that fits you the
-        most is <span class="text-[#D4C0A8] font-semibold">Beige</span
-        ><br /><br />
+<h2 class="mb-4 text-3xl md:text-3xl font-semibold text-gray-900 text-center">
+  <span class="text-4xl block">
+    So let me "update" my words from the birthday gift <br>(CRINGE ALERT)
+  </span>
+</h2>
 
-        The first time I saw you back from our mid-sem break. The night before
-        you texted saying you were going to be in the Shuttle boarding for
-        Caulfield on a Thursday at 2 PM. Now, this part I would never dare to
-        tell you. But on that day, my class also ends at 2, so I had to ran
-        there as fast as I could (i'm not a good runner), and thank God I've
-        made it beacuase, <br /><br />
-
-        I still remember the scarf you wore that day. To be completely honest,
-        it stopped me for a few seconds. You looked incredible in that colour,
-        Jolie. I know this sounds a bit sentimental, but it felt like you were
-        made for autumn even though it was winter. The scarf and the outfit you
-        chose just worked perfectly together. I didn’t know what to say... it
-        genuinely left an impression on me, just speechless. So that entire trip
-        I just couldn't help it but look at the scarf.
-      </p>
-    </swiper-slide>
-
-    <swiper-slide class="flex flex-col items-center justify-center px-6">
-      <h2 class="mb-4 text-3xl md:text-3xl font-semibold text-gray-900">
-        <span class="text-4xl"
-          >So let me "update" my words from the birthday gift</span
-        >
-      </h2>
 
       <p
         class="text-gray-600 mt-2 text-center max-w-xl reveal-text whitespace-pre-line cursor-pointer"

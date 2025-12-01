@@ -64,7 +64,6 @@ export class App {
       this.next();
     });
 
-    // 🔹 Add one-time listener for first user click
 
   }
 
@@ -136,17 +135,26 @@ showWelcomePopup() {
     `,
     width: '32rem',
     padding: '1.5rem',
-    background: 'rgba(0, 0, 0, 1)',
+    background: 'rgba(0,0,0,1)',
     color: '#ffffffff',
-    cancelButtonColor: '#444141ff',
     confirmButtonText: 'Next',
-    confirmButtonColor: '#444141ff'
+    confirmButtonColor: '#444141ff',
+    allowOutsideClick: true,
+    allowEscapeKey: true
   }).then(res => {
+
     if (res.isConfirmed) {
+      // User pressed NEXT -> show popup 2, do NOT play music
       this.showNextPopup();
+    } else {
+      // User DISMISSED popup 1 (close, outside click, esc) -> play music
+      this.unlockMusic();
     }
+
   });
 }
+
+
 
 showNextPopup() {
   Swal.fire({
@@ -158,17 +166,23 @@ showNextPopup() {
     `,
     width: '32rem',
     padding: '1.5rem',
-    background: 'rgba(0, 0, 0, 1)',
+    background: 'rgba(0,0,0,1)',
     color: '#ffffffff',
     confirmButtonText: 'Close',
-    confirmButtonColor: '#444141ff'
+    confirmButtonColor: '#444141ff',
+    allowOutsideClick: true,
+    allowEscapeKey: true
   }).then(() => {
+    // User closed popup 2 -> NOW play music
+    this.unlockMusic();
+  });
+}
 
-    // Unlock audio ONLY now
+private unlockMusic() {
+  if (!this.firstClickListenerAdded) {
     document.addEventListener('click', this.handleFirstClick, { once: true });
     this.firstClickListenerAdded = true;
-
-  });
+  }
 }
 
 }

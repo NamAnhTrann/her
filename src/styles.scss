@@ -13,3 +13,72 @@ html,body {
 }
 
 
+/* Soft card entrance */
+.autumn-card {
+  animation: fadeInUp 1.2s ease;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FALLING LEAVES CONTAINER */
+.autumn-leaves {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Single leaf */
+.leaf {
+  position: absolute;
+  top: -10vh;
+  width: 28px;
+  height: 28px;
+  background-image: url('/assets/leaf.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;
+
+  animation: fall 9s linear infinite, sway 3s ease-in-out infinite alternate;
+}
+
+/* Different positions and timings */
+.leaf-1 {
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.leaf-2 {
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.leaf-3 {
+  left: 65%;
+  animation-delay: 4s;
+}
+
+.leaf-4 {
+  left: 80%;
+  animation-delay: 6s;
+}
+
+/* Falling motion */
+@keyframes fall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 110vh, 0) rotate(180deg);
+  }
+}
