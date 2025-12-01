@@ -158,7 +158,7 @@ showWelcomePopup() {
 
 showNextPopup() {
   Swal.fire({
-    title: 'If you see redacted text, tap on them',
+    title: 'If you see redacted text, tap on them and PLEASE SELECT THE OPTION BY ORDER ( i know u wont but please remember to read all )',
     html: `
       <p style="font-size: 1rem; line-height: 1.6;">
         Have Fun.
