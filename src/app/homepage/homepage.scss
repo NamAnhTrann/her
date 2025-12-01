@@ -313,18 +313,41 @@ p strong {
   z-index: 0; /* keep strong under reveal */
 }
 
-
-.joy-highlight {
-  position: relative;
-  z-index: -1;
+p strong::after {
+  z-index: -2 !important; /* keep underline behind strong */
 }
 
-.joy-highlight::after {
+
+
+.circle-sketch-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: -1; /* must be above reveal mask */
+}
+
+.circle-sketch-highlight:before,
+.circle-sketch-highlight:after {
   content: "";
   position: absolute;
-  inset: -4px;
-  border-radius: 6px;
-  background: rgba(221, 161, 94, 0.25);
-  filter: blur(6px);
-  z-index: -1;
+  width: 115%;
+  height: 1.2em;
+  left: -5%;
+  top: 0.1em;
+  border-radius: 50%;
+  border: 2px solid #DDA15E;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: -1; /* behind text but ABOVE reveal mask via parent z-index */
 }
+
+.circle-sketch-highlight:before {
+  transform: rotate(3deg);
+  border-right-color: transparent;
+}
+
+.circle-sketch-highlight:after {
+  transform: rotate(-2deg);
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
