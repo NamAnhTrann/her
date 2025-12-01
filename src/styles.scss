@@ -82,3 +82,19 @@ html,body {
     transform: translate3d(0, 110vh, 0) rotate(180deg);
   }
 }
+/* Smooth blur for the entire app except the SweetAlert popup */
+body.swal2-shown app-root {
+  transition: filter 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: blur(8px) brightness(0.75);
+}
+
+/* Remove blur from SweetAlert itself */
+.swal2-container,
+.swal2-popup,
+.swal2-title,
+.swal2-html-container,
+.swal2-actions {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
