@@ -106,7 +106,7 @@ body.swal2-shown app-root {
 .realistic-marker-highlight {
   position: relative;
   display: inline-block;
-  z-index: 0;
+  z-index: -1;
 }
 
 /* Card 1 - Pink */
@@ -117,7 +117,7 @@ body.swal2-shown app-root {
   top: 0.1em;
   width: calc(100% + 0.5em);
   height: 1em;
-  background-color: #ff6db7;
+  background-color: #ebc4d7;
   z-index: -1;
   filter: url(#marker-shape);
   padding: 0 0.25em;
@@ -145,7 +145,7 @@ body.swal2-shown app-root {
   top: 0.1em;
   width: calc(100% + 0.5em);
   height: 1em;
-  background-color: #C7B299;
+  background-color: #dbc7af;
   z-index: -1;
   filter: url(#marker-shape);
   padding: 0 0.25em;
