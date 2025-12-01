@@ -313,6 +313,18 @@ p strong {
   z-index: 0; /* keep strong under reveal */
 }
 
-p strong::after {
-  z-index: -1 !important; /* keep underline behind strong */
+
+.joy-highlight {
+  position: relative;
+  z-index: -1;
+}
+
+.joy-highlight::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 6px;
+  background: rgba(221, 161, 94, 0.25);
+  filter: blur(6px);
+  z-index: -1;
 }
