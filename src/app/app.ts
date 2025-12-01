@@ -2,18 +2,17 @@ import { Component, HostListener, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './header/header';
 import 'preline/preline';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Header],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {
   protected readonly title = signal('her');
   isMenuOpen = false;
-
-
 
   currentSong = signal('');
   isEasterEgg = signal(false);
@@ -25,30 +24,30 @@ export class App {
   isMusicOn = signal(false);
 
   private currentPlaylist: string[] = [
-
     'songs/do flowers bloom where you walk_.mp3',
     'songs/forward.mp3',
     'songs/and still, the sky waited.mp3',
-    
   ];
 
   toggleMenu() {
-  this.isMenuOpen = !this.isMenuOpen;
-}
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
-closeMenu() {
-  this.isMenuOpen = false;
-}
-@HostListener('document:click', ['$event'])
-onDocumentClick(event: MouseEvent) {
-  const menu = document.getElementById('options-menu');
-  const button = document.getElementById('options-menu-button');
-
-  if (!menu?.contains(event.target as Node) && !button?.contains(event.target as Node)) {
+  closeMenu() {
     this.isMenuOpen = false;
   }
-}
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const menu = document.getElementById('options-menu');
+    const button = document.getElementById('options-menu-button');
 
+    if (
+      !menu?.contains(event.target as Node) &&
+      !button?.contains(event.target as Node)
+    ) {
+      this.isMenuOpen = false;
+    }
+  }
 
   showPlayHint = signal(false);
   private firstClickListenerAdded = false;
@@ -56,7 +55,8 @@ onDocumentClick(event: MouseEvent) {
   ngOnInit(): void {
     this.audio.preload = 'auto';
     this.audio.loop = false;
-    this.audio.volume = 0.3; 
+    this.audio.volume = 0.3;
+    this.showWelcomePopup();
 
     this.setPlaylist(this.currentPlaylist);
 
@@ -71,14 +71,12 @@ onDocumentClick(event: MouseEvent) {
     }
   }
 
-private handleFirstClick = () => {
-  // Just unlock audio; do NOT restart the song
-  this.audio.play().then(() => {
-    this.isMusicOn.set(true);
-  });
-};
-
-
+  private handleFirstClick = () => {
+    // Just unlock audio; do NOT restart the song
+    this.audio.play().then(() => {
+      this.isMusicOn.set(true);
+    });
+  };
 
   private setPlaylist(list: string[]) {
     if (!list.length) return;
@@ -86,17 +84,18 @@ private handleFirstClick = () => {
     this.load(this.i);
   }
 
-private load(index: number) {
-  if (!this.currentPlaylist?.length) return;
+  private load(index: number) {
+    if (!this.currentPlaylist?.length) return;
 
-  this.i = ((index % this.currentPlaylist.length) + this.currentPlaylist.length) % this.currentPlaylist.length;
+    this.i =
+      ((index % this.currentPlaylist.length) + this.currentPlaylist.length) %
+      this.currentPlaylist.length;
 
-  this.audio.src = this.currentPlaylist[this.i]; // ONLY SET SOURCE
+    this.audio.src = this.currentPlaylist[this.i]; // ONLY SET SOURCE
 
-  const raw = this.currentPlaylist[this.i].split('/').pop() ?? '';
-  this.currentSong.set(raw.replace(/\.[^/.]+$/, ''));
-}
-
+    const raw = this.currentPlaylist[this.i].split('/').pop() ?? '';
+    this.currentSong.set(raw.replace(/\.[^/.]+$/, ''));
+  }
 
   private next() {
     if (!this.currentPlaylist.length) return;
@@ -129,6 +128,44 @@ private load(index: number) {
       this.resume();
     }
   }
+
+  showWelcomePopup() {
+    Swal.fire({
+      title: 'This Might Be Better On Laptop',
+      html: `
+    <p style="font-size: 1rem; line-height: 1.6;">
+      Tried to optimise this on mobile but I am bad at frontend, UI stuff, sorry •ᴗ•
+    </p>
+  `,
+      width: '32rem',
+      padding: '1.5rem',
+      background: 'rgba(0, 0, 0, 1)',
+      color: '#ffffffff',
+
+      cancelButtonColor: '#444141ff',
+
+      confirmButtonText: 'Next',
+      confirmButtonColor: '#444141ff',
+    }).then((res) => {
+      if (res.isConfirmed) {
+        this.showNextPopup();
+      }
+    });
+  }
+  showNextPopup() {
+    Swal.fire({
+      title: 'If you see redacted text, tab on em .ᐟ.ᐟ',
+      html: `
+      <p style="font-size: 1rem; line-height: 1.6;">
+        Have Fun ✧˖°.
+      </p>
+    `,
+      width: '32rem',
+      padding: '1.5rem',
+      background: 'rgba(0, 0, 0, 1)',
+      color: '#ffffffff',
+      confirmButtonText: 'Close',
+      confirmButtonColor: '#444141ff',
+    });
+  }
 }
-
-
