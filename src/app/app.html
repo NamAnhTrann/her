@@ -10,29 +10,39 @@
 <div class="fixed top-4 left-4 z-[9999]">
 
   <!-- Menu trigger -->
-  <button 
-    id="options-menu-button"
-    (click)="toggleMenu()"
-    class="px-4 py-2 rounded-lg 
-           bg-white/20 text-sky-300
-           backdrop-blur-md 
-           hover:bg-white/30 transition"
-  >
-    Menu
-  </button>
+<button 
+  id="options-menu-button"
+  (click)="toggleMenu()"
+  class="px-4 py-2 rounded-lg 
+         bg-white/20 text-sky-300
+         backdrop-blur-md 
+         transition-all duration-300
+
+         hover:bg-white/40
+         hover:text-sky-600
+         hover:shadow-lg
+         hover:scale-[1.06]
+
+         active:scale-[0.97]"
+>
+  Menu
+</button>
+
 
   <!-- Dropdown (animated) -->
-  <div
-    id="options-menu"
-    [class.hidden]="!isMenuOpen"
-    class="absolute mt-2 w-44 
-           bg-white/30 backdrop-blur-xl
-           rounded-xl shadow-lg p-2
-           origin-top 
-           left-full ml-3       
-           transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
-           dropdown-animate"
-  >
+<div
+  id="options-menu"
+  [class.hidden]="!isMenuOpen"
+  class="absolute mt-2 w-44 
+         bg-white/30 backdrop-blur-xl
+         rounded-xl shadow-lg p-2
+         origin-top 
+         left-full ml-3
+         transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
+         hover:scale-[1.03] hover:shadow-2xl hover:bg-white/40
+         dropdown-animate"
+>
+
     <a href="#1" class="block option-btn px-4 py-2 text-center rounded-lg bg-sky-500 text-white font-semibold hover:bg-sky-600 transition">
       Main Hobby
     </a>
