@@ -27,6 +27,9 @@ export class App {
     'songs/do flowers bloom where you walk_.mp3',
     'songs/forward.mp3',
     'songs/and still, the sky waited.mp3',
+    'songs/Watashino Uso.mp3',
+
+    
   ];
 
   toggleMenu() {
