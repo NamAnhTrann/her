@@ -27,11 +27,10 @@ export class App {
     'songs/do flowers bloom where you walk_.mp3',
     'songs/forward.mp3',
     'songs/and still, the sky waited.mp3',
-        'songs/sora.wav - best part (ft. chevy).mp3',
+    'songs/sora.wav - best part (ft. chevy).mp3',
+    'songs/Bruno Major - Nothing (Lyric & Chord Video).mp3',
 
     'songs/Watashino Uso.mp3',
-
-    
   ];
 
   toggleMenu() {
@@ -68,8 +67,6 @@ export class App {
     this.audio.addEventListener('ended', () => {
       this.next();
     });
-
-
   }
 
   private handleFirstClick = () => {
@@ -130,64 +127,60 @@ export class App {
     }
   }
 
-showWelcomePopup() {
-  Swal.fire({
-    title: 'This Might Be Better On Laptop',
-    html: `
+  showWelcomePopup() {
+    Swal.fire({
+      title: 'This Might Be Better On Laptop',
+      html: `
       <p style="font-size: 1rem; line-height: 1.6;">
         Tried to optimise this on mobile but I am bad at frontend, UI stuff, sorry •ᴗ•
       </p>
     `,
-    width: '32rem',
-    padding: '1.5rem',
-    background: 'rgba(0,0,0,1)',
-    color: '#ffffffff',
-    confirmButtonText: 'Next',
-    confirmButtonColor: '#444141ff',
-    allowOutsideClick: true,
-    allowEscapeKey: true
-  }).then(res => {
+      width: '32rem',
+      padding: '1.5rem',
+      background: 'rgba(0,0,0,1)',
+      color: '#ffffffff',
+      confirmButtonText: 'Next',
+      confirmButtonColor: '#444141ff',
+      allowOutsideClick: true,
+      allowEscapeKey: true,
+    }).then((res) => {
+      if (res.isConfirmed) {
+        // User pressed NEXT -> show popup 2, do NOT play music
+        this.showNextPopup();
+      } else {
+        // User DISMISSED popup 1 (close, outside click, esc) -> play music
+        this.unlockMusic();
+      }
+    });
+  }
 
-    if (res.isConfirmed) {
-      // User pressed NEXT -> show popup 2, do NOT play music
-      this.showNextPopup();
-    } else {
-      // User DISMISSED popup 1 (close, outside click, esc) -> play music
-      this.unlockMusic();
-    }
-
-  });
-}
-
-
-
-showNextPopup() {
-  Swal.fire({
-    title: 'If you see redacted text, tap on them and PLEASE SELECT THE OPTION BY ORDER ( i know u wont but please remember to read all )',
-    html: `
+  showNextPopup() {
+    Swal.fire({
+      title:
+        'If you see redacted text, tap on them and PLEASE SELECT THE OPTION BY ORDER ( i know u wont but please remember to read all )',
+      html: `
       <p style="font-size: 1rem; line-height: 1.6;">
         Have Fun.
       </p>
     `,
-    width: '32rem',
-    padding: '1.5rem',
-    background: 'rgba(0,0,0,1)',
-    color: '#ffffffff',
-    confirmButtonText: 'Close',
-    confirmButtonColor: '#444141ff',
-    allowOutsideClick: true,
-    allowEscapeKey: true
-  }).then(() => {
-    // User closed popup 2 -> NOW play music
-    this.unlockMusic();
-  });
-}
-
-private unlockMusic() {
-  if (!this.firstClickListenerAdded) {
-    document.addEventListener('click', this.handleFirstClick, { once: true });
-    this.firstClickListenerAdded = true;
+      width: '32rem',
+      padding: '1.5rem',
+      background: 'rgba(0,0,0,1)',
+      color: '#ffffffff',
+      confirmButtonText: 'Close',
+      confirmButtonColor: '#444141ff',
+      allowOutsideClick: true,
+      allowEscapeKey: true,
+    }).then(() => {
+      // User closed popup 2 -> NOW play music
+      this.unlockMusic();
+    });
   }
-}
 
+  private unlockMusic() {
+    if (!this.firstClickListenerAdded) {
+      document.addEventListener('click', this.handleFirstClick, { once: true });
+      this.firstClickListenerAdded = true;
+    }
+  }
 }
